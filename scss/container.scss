@@ -1,0 +1,81 @@
+/*
+ * study sass
+ */
+
+//study sass
+//!study sass
+@import 'input.scss';
+@import "button";
+$primaryColor:blue;
+$secondColor:pink;
+$primaryColor:black !default;
+$headerColor:yellow !default;
+$footerColor:grey;
+$height:56px;
+$mainColor:red;
+$article:article;
+$section:section;
+.fontDetail {
+    font: {
+        family: fanstasy;
+        size: 16px;
+        weight: blod;
+    }
+}
+@mixin outSide($width){
+    border:$width solid black;
+}
+header,
+main,
+footer {
+    color: $primaryColor;
+    @media (max-width: 700px) {
+        color: $secondColor;
+    }
+    @include outSide(2px)
+}
+
+header {
+    height: $height;
+    background: $headerColor;
+    text-align: center;
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+    }
+    nav {
+        color: $primaryColor;
+        background: lightblue;
+    }
+    @extend .fontDetail
+}
+
+main {
+    position: absolute;
+    top: 56px;
+    bottom: 56px;
+    width: 100%;
+    background: $mainColor;
+    #{$article},
+    #{$section} {
+        float: left;
+        width: 50%;
+        height: 100px;
+    }
+    #{$article} {
+        background: lightseagreen;
+    }
+    #{$section} {
+        background: lightsteelblue;
+    }
+    @extend .fontDetail
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    height: $height;
+    width: 50%+50%;
+    background: lighten($footerColor, 40%);
+    @extend .fontDetail
+}

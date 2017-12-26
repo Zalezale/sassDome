@@ -1,0 +1,8 @@
+$width:10px;
+$inputColor: #2daebf;
+$inputBKColore:#2DAEBF;
+input {
+    width: $width+1in;
+    color: darken($inputColor, 50%);
+    background: lighten($inputBKColore, 10%);
+}

@@ -1,0 +1,62 @@
+/*
+ * study sass
+ */
+input {
+  width: 106px;
+  color: black;
+  background: #4bc4d4; }
+
+button {
+  background: yellow; }
+
+.fontDetail, header, main, footer {
+  font-family: fanstasy;
+  font-size: 16px;
+  font-weight: blod; }
+
+header,
+main,
+footer {
+  color: blue;
+  border: 2px solid black; }
+  @media (max-width: 700px) {
+    header,
+    main,
+    footer {
+      color: pink; } }
+
+header {
+  height: 56px;
+  background: yellow;
+  text-align: center;
+  width: 100%; }
+  header:hover {
+    cursor: pointer; }
+  header nav {
+    color: blue;
+    background: lightblue; }
+
+main {
+  position: absolute;
+  top: 56px;
+  bottom: 56px;
+  width: 100%;
+  background: red; }
+  main article,
+  main section {
+    float: left;
+    width: 50%;
+    height: 100px; }
+  main article {
+    background: lightseagreen; }
+  main section {
+    background: lightsteelblue; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 56px;
+  width: 100%;
+  background: #e6e6e6; }
+
+/*# sourceMappingURL=container.css.map */
